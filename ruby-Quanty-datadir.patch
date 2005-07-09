@@ -1,0 +1,12 @@
+diff -ur quanty-1.2o/lib/quanty/fact.rb quanty-1.2/lib/quanty/fact.rb
+--- quanty-1.2o/lib/quanty/fact.rb	2004-02-29 00:38:29.000000000 -0700
++++ quanty-1.2/lib/quanty/fact.rb	2005-07-09 16:35:17.000000000 -0600
+@@ -228,7 +228,7 @@
+ 
+   ### Loading unit data ###
+   fn = nil
+-  $:.each{ |dir|
++  ['/usr/share/ruby'] + $:.each{ |dir|
+     fn = dir + "/quanty/units.dump"
+     break if FileTest.exist?( fn )
+     fn = nil
