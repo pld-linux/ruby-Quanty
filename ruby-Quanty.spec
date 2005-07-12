@@ -2,6 +2,7 @@
 %define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
 %define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
 Summary:	Library to convert quantities in various units
+Summary(pl):	Biblioteka do przeliczania wielko¶ci w ró¿nych jednostkach
 Name:		ruby-Quanty
 Version:	1.2
 Release:	1
@@ -18,7 +19,14 @@ Requires:	ruby
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A Quantity class containing "value" and "unit", providing automatic unit conversion and calculation. GNU/units data and Racc parser are employed.
+A Quantity class containing "value" and "unit", providing automatic
+unit conversion and calculation. GNU/units data and Racc parser are
+employed.
+
+%description -l pl
+Klasa Quantity zawiera "value" i "unit", udostêpniaj±ce automatyczn±
+konwersjê i przeliczanie jednostek. U¿ywane s± dane GNU/units oraz
+parser Racc.
 
 %prep
 %setup -q -n quanty-%{version}
