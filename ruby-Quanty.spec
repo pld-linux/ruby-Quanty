@@ -1,6 +1,3 @@
-%define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
-%define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
-%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
 Summary:	Library to convert quantities in various units
 Summary(pl):	Biblioteka do przeliczania wielko¶ci w ró¿nych jednostkach
 Name:		ruby-Quanty
@@ -10,8 +7,9 @@ License:	Ruby's
 Group:		Development/Languages
 Source0:	http://www.ir.isas.ac.jp/~masa/ruby/dist/quanty-%{version}.tar.gz
 # Source0-md5:	e802a3c5e919b7ef192ea81ec84725d8
-Patch0:	%{name}-datadir.patch
+Patch0:		%{name}-datadir.patch
 URL:		http://www.ir.isas.ac.jp/~masa/ruby/index-e.html
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 BuildRequires:	setup.rb
@@ -31,14 +29,13 @@ parser Racc.
 %prep
 %setup -q -n quanty-%{version}
 %patch0 -p1
-
-%build
 cp %{_datadir}/setup.rb .
 
-mkdir data/ruby/quanty -p
+mkdir -p data/ruby/quanty
+
+%build
 ruby mkdump.rb units.dump
 mv units.dump data/ruby/quanty
-
 ruby setup.rb config \
 	--rbdir=%{ruby_rubylibdir} \
 	--sodir=%{ruby_archdir}
