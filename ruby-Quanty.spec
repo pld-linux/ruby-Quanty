@@ -2,7 +2,7 @@ Summary:	Library to convert quantities in various units
 Summary(pl):	Biblioteka do przeliczania wielko¶ci w ró¿nych jednostkach
 Name:		ruby-Quanty
 Version:	1.2
-Release:	1
+Release:	2
 License:	Ruby's
 Group:		Development/Languages
 Source0:	http://www.ir.isas.ac.jp/~masa/ruby/dist/quanty-%{version}.tar.gz
@@ -10,10 +10,10 @@ Source0:	http://www.ir.isas.ac.jp/~masa/ruby/dist/quanty-%{version}.tar.gz
 Patch0:		%{name}-datadir.patch
 URL:		http://www.ir.isas.ac.jp/~masa/ruby/index-e.html
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby
+BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
 BuildRequires:	setup.rb
-Requires:	ruby
+Requires:	ruby-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
