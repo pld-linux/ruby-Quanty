@@ -9,10 +9,10 @@ Source0:	http://www.ir.isas.ac.jp/~masa/ruby/dist/quanty-%{version}.tar.gz
 # Source0-md5:	e802a3c5e919b7ef192ea81ec84725d8
 Patch0:		%{name}-datadir.patch
 URL:		http://www.ir.isas.ac.jp/~masa/ruby/index-e.html
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
 BuildRequires:	setup.rb
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
