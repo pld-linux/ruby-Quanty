@@ -1,5 +1,5 @@
 Summary:	Library to convert quantities in various units
-Summary(pl.UTF-8):   Biblioteka do przeliczania wielkości w różnych jednostkach
+Summary(pl.UTF-8):	Biblioteka do przeliczania wielkości w różnych jednostkach
 Name:		ruby-Quanty
 Version:	1.2
 Release:	2
