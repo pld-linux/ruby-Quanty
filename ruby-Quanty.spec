@@ -1,5 +1,5 @@
 Summary:	Library to convert quantities in various units
-Summary(pl):	Biblioteka do przeliczania wielko¶ci w ró¿nych jednostkach
+Summary(pl.UTF-8):   Biblioteka do przeliczania wielkoÅ›ci w rÃ³Å¼nych jednostkach
 Name:		ruby-Quanty
 Version:	1.2
 Release:	2
@@ -20,9 +20,9 @@ A Quantity class containing "value" and "unit", providing automatic
 unit conversion and calculation. GNU/units data and Racc parser are
 employed.
 
-%description -l pl
-Klasa Quantity zawiera "value" i "unit", udostêpniaj±ce automatyczn±
-konwersjê i przeliczanie jednostek. U¿ywane s± dane GNU/units oraz
+%description -l pl.UTF-8
+Klasa Quantity zawiera "value" i "unit", udostÄ™pniajÄ…ce automatycznÄ…
+konwersjÄ™ i przeliczanie jednostek. UÅ¼ywane sÄ… dane GNU/units oraz
 parser Racc.
 
 %prep
